@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   
+   <link href="src/style.css" rel="stylesheet" />
+   
+    <meta charset="UTF-8">
+    <title>Pesquisa sobre Trânsito</title>
+  
+</head>
+<body>
+   <!-- Estrutura do Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+           
+          <!--<img src="logo.png" alt="Logo" class="logo-modal">-->
+            <h1 id="mensg" class="typewriter-text" ></h1>
+           
+        </div>
+    </div>
+     <div class="header">
+    Pesquisa Pública/2026 - Insegurança ao estacionar veículo leve
+    </div>
+    <div class="header-2">
+   *Elaborado por ex-instrutor de Auto Escola.
+    </div>
+  <!--<div class="container"></div> -->
+   
+    <div class="form-container">
+        <p id="status"></p>
+        <form id="formPesquisa">
+           
+    <label>Você possui CNH válida?</label>
+    <select id="cnh" required>
+      <option value="">Selecione</option>
+      <option>Sim</option>
+      <option>Não</option>
+    </select>
+
+    <label>Há quanto tempo dirige?</label>
+    <select id="tempo">
+      <option value="">Selecione</option>
+      <option>Menos de 1 ano</option>
+      <option>1 a 3 anos</option>
+      <option>3 a 10 anos</option>
+      <option>Mais de 10 anos</option>
+    </select>
+
+    <label>Você sente insegurança ao estacionar, mesmo sendo habilitado?</label>
+    <select id="inseguranca" required>
+      <option value="">Selecione</option>
+      <option>Sim, frequentemente</option>
+      <option>Às vezes</option>
+      <option>Raramente</option>
+      <option>Nunca</option>
+    </select>
+
+    <label>Qual situação causa mais dificuldade?</label>
+    <select id="situacao">
+      <option value="">Selecione</option>
+      <option>Baliza (vaga paralela)</option>
+      <option>Shopping/estacionamento fechado</option>
+      <option>Rua movimentada</option>
+      <option>Vagas apertadas</option>
+      <option>Não tenho dificuldade</option>
+    </select>
+
+    <label>Principal motivo da insegurança:</label>
+    <textarea id="motivo" rows="3"></textarea>
+
+    <fieldset>
+  <legend>Informações de Contato</legend>
+
+  <label>Telefone</label>
+  <input  type="tel" id="tel" placeholder="(00) 00000-0000"  inputmode="numeric" maxlength="15"></input>
+
+  <label>E-mail</label>
+  <input  id="e_mail" type="email" placeholder="seuemail@exemplo.com">
+
+</fieldset>
+
+
+    <button type="submit">Enviar Resposta</button>
+    <div class="ok" id="msg"></div>
+        
+        </form>
+    </div>
+   
+ <div class="footer">
+    © 2026 - Todos os direitos reservados
+  </div>
+
+   <script  src="src/script.js"></script>
+</body>
+</html>
