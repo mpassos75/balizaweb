@@ -38,9 +38,9 @@ app.use(express.static('src')); // Onde 'public' é a pasta com seu CSS
 //app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: true }));
 //rota
-app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/acao', (request, response) => {
+app.get('/', (request, response) => {
 console.log('Servidor Acionado!');
 
  response.sendFile(path.join(__dirname, 'index.html'));
