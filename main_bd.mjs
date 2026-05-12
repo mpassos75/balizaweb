@@ -23,7 +23,7 @@ const app = express();
 const port = process.env.PORT || 3100;
 
  //console.log("Esse fliname"+__filename);
- //console.log("Esse dirname"+__dirname);
+ console.log("Esse dirname"+__dirname);
  
  
 //
@@ -33,7 +33,8 @@ insertCondt();
 
 
 // Exemplo em Express
-app.use(express.static('src')); // Onde 'public' é a pasta com seu CSS
+app.use(express.static('public')); // Onde 'public' é a pasta com seu CSS
+//app.use(express.static(path.join(__dirname, 'src')));
 
 //app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: true }));
