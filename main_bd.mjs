@@ -22,8 +22,8 @@ const app = express();
 
 const port = process.env.PORT || 3100;
 
- //console.log("Esse fliname"+__filename);
- //console.log("Esse dirname"+__dirname);
+ console.log("Esse fliname"+__filename);
+ console.log("Esse dirname"+__dirname);
  
  
 //
