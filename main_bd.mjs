@@ -8,6 +8,7 @@ import  path  from 'node:path';
 import { fileURLToPath } from 'node:url';
 import express from 'express';
 import cors from 'cors';
+import routes from './routes/index.js';
 
 import bodyParser from 'body-parser';
 
@@ -15,8 +16,8 @@ import bodyParser from 'body-parser';
 //const path = require('path');
 //const cors = require('cors');
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename, 'balizaweb');
-
+//const __dirname = path.dirname(__filename, 'balizaweb');
+app.use(express.static(path.join(__dirname, 'public')));
 const app = express();
 //const bodyParser = require('body-parser');
 
@@ -33,18 +34,19 @@ insertCondt();
 
 
 // Exemplo em Express
-app.use(express.static('public')); // Onde 'public' é a pasta com seu CSS
-//app.use(express.static(path.join(__dirname, 'src')));
+//app.use(express.static('public')); // Onde 'public' é a pasta com seu CSS
+//app.use(express.static(path.join(__filename, 'public'))); // Onde 'public' é a pasta com seu CSS
 
 //app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/', routes);
 //rota
 //app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (request, response) => {
 console.log('Servidor Acionado!');
 
- response.sendFile(path.join(__dirname, 'index.html'));
+ response.sendFile(path.join(__dirname, 'public','index.html'));
 //return response.send('Servidor Pesquisa Trânsito--OK!');
 });
 //rota usuarios
