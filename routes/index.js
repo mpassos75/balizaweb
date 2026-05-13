@@ -2,9 +2,9 @@ import { Router } from 'express';
 const router = Router();
 
 router.get('/', (req, res) => {
-    res.sendFile('style.css', { root: 'css' });
-    res.sendFile('estacionar.jpg', { root: 'public' });
-    res.sendFile('coment.txt', { root: 'public' });
+    res.sendFile('style.css', { root: 'public/css' });
+    res.sendFile('estacionar.jpg', { root: 'public/images' });
+    res.sendFile('coment.txt', { root: 'public/documents' });
     res.sendFile('script.js', { root: 'public/src' });
 });
 

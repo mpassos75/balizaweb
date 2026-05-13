@@ -16,8 +16,8 @@ import bodyParser from 'body-parser';
 //const path = require('path');
 //const cors = require('cors');
 const __filename = fileURLToPath(import.meta.url);
-//const __dirname = path.dirname(__filename, 'balizaweb');
-app.use(express.static(path.join(__dirname, 'public')));
+const __dirname = path.dirname(__filename);
+
 const app = express();
 //const bodyParser = require('body-parser');
 
@@ -36,7 +36,7 @@ insertCondt();
 // Exemplo em Express
 //app.use(express.static('public')); // Onde 'public' é a pasta com seu CSS
 //app.use(express.static(path.join(__filename, 'public'))); // Onde 'public' é a pasta com seu CSS
-
+app.use(express.static(path.join(__dirname, 'public')));
 //app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', routes);
