@@ -8,7 +8,7 @@ import  path  from 'node:path';
 import { fileURLToPath } from 'node:url';
 import express from 'express';
 import cors from 'cors';
-import routes from './routes/index.js';
+
 
 import bodyParser from 'body-parser';
 
@@ -39,14 +39,16 @@ insertCondt();
 app.use(express.static(path.join(__dirname, 'public')));
 //app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/', routes);
+
 //rota
 //app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (request, response) => {
 console.log('Servidor Acionado!');
 
- response.sendFile(path.join(__dirname, 'public','index.html'));
+
+
+ response.sendFile(path.join(__dirname, 'index.html'));
 //return response.send('Servidor Pesquisa Trânsito--OK!');
 });
 //rota usuarios
