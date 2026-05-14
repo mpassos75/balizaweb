@@ -1,15 +1,10 @@
 {
   "name": "balizaweb",
-  
   "version": "0.0.0",
   "main": "main_bd.mjs",
-  "type": "module", 
-
-    
-  
-  
+  "type": "module",
   "scripts": {
-    "dev": "react-scripts", 
+    "dev": "react-scripts",
     "build": "react-scripts build",
     "lint": "eslint .",
     "preview": "react-scripts build preview",
@@ -27,7 +22,6 @@
     "sqlite3": "^6.0.1"
   },
   "devDependencies": {
-    
     "@eslint/js": "^10.0.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
@@ -37,12 +31,11 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
     "nodemon": "^3.1.14",
+    "react-scripts": "^5.0.1",
     "vite": "^8.0.12"
   },
- 
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "keywords": [],
   "author": "mpassos",
   "license": "ISC"
-  
 }
