@@ -36,7 +36,7 @@ insertCondt();
 // Exemplo em Express
 //app.use(express.static('public')); // Onde 'public' é a pasta com seu CSS
 //app.use(express.static(path.join(__filename, 'public'))); // Onde 'public' é a pasta com seu CSS
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname)));
 //app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
