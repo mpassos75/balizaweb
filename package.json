@@ -1,14 +1,14 @@
 {
   "name": "balizaweb",
   "version": "0.0.0",
-  "main": "main_bd.mjs",
+  "main": "src/main_bd.mjs",
   "type": "module",
   "scripts": {
     "dev": "react-scripts",
     "build": "react-scripts build",
     "lint": "eslint .",
     "preview": "react-scripts build preview",
-    "start": "nodemon /main_bd.mjs"
+    "start": "nodemon src/main_bd.mjs"
   },
   "dependencies": {
     "@rolldown/binding-win32-x64-msvc": "^1.0.2",

@@ -1,5 +1,5 @@
-import  {openDB} from './mydados/config_bd.mjs';
-import  {insertCondt} from './mydados/tab_condutor.mjs';
+import  {openDB} from './config_bd.mjs';
+import  {insertCondt} from './tab_condutor.mjs';
 //const openDB = require('./config_bd.cjs');
 
 //const  = require('./config_bd.js');
@@ -18,13 +18,14 @@ import bodyParser from 'body-parser';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+
 const app = express();
 //const bodyParser = require('body-parser');
 
 const port = process.env.PORT || 3100;
 
- //console.log("Esse fliname"+__filename);
- console.log("Esse dirname"+__dirname);
+ console.log("Esse fliname->"+__filename);
+ console.log("Esse dirname->"+__dirname);
  
  
 //

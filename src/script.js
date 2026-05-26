@@ -40,7 +40,7 @@ document.getElementById('formPesquisa').addEventListener('submit', async (e) => 
 });
 
 
-fetch('public/coment.txt')
+fetch('coment.txt')
     .then(response => response.text())
     
     .then(data => {
