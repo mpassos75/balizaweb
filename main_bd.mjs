@@ -40,7 +40,7 @@ insertCondt();
 //app.use(express.static(path.join(__dirname, '..','index.html')));
 //app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, './public')));
 //rota
 //app.use(express.static(path.join(__dirname, 'public')));
 
