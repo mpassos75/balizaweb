@@ -48,7 +48,7 @@ app.get('/', (request, response) => {
 console.log('Servidor Acionado!');
 
 
- response.sendFile(path.join(__dirname, 'public', 'index.html'));
+ response.sendFile(path.join(__dirname, '../public', 'index.html'));
 //return response.send('Servidor Pesquisa Trânsito--OK!');
 });
 //rota usuarios
