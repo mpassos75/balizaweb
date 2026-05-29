@@ -36,11 +36,11 @@ insertCondt();
 
 // Exemplo em Express
 //app.use(express.static('public')); // Onde 'public' é a pasta com seu CSS
-//app.use(express.static(path.join(__filename, 'public'))); // Onde 'public' é a pasta com seu CSS
-app.use(express.static(path.join(__dirname)));
+//app.use(express.static(path.join(__filename))); // Onde 'public' é a pasta com seu CSS
+//app.use(express.static(path.join(__dirname, '..','index.html')));
 //app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(express.static(path.join(__dirname, 'public')));
 //rota
 //app.use(express.static(path.join(__dirname, 'public')));
 
@@ -48,8 +48,7 @@ app.get('/', (request, response) => {
 console.log('Servidor Acionado!');
 
 
-
- response.sendFile(path.join(__dirname, 'index.html'));
+ response.sendFile(path.join(__dirname, 'public', 'index.html'));
 //return response.send('Servidor Pesquisa Trânsito--OK!');
 });
 //rota usuarios
